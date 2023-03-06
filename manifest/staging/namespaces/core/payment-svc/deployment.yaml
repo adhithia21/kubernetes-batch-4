@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-svc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: payment-svc
+  template:
+    metadata:
+      labels:
+        app: payment-svc
+    spec:
+      containers:
+      - name: payment-svc
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+        ports:
+        - containerPort: 80
