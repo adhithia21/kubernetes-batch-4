@@ -3,3 +3,12 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+  - name: backoffice-config
+    literals:
+      - "APP_NAME=backoffice"
+      - "APP_VERSION=v1.1.0"
+      - "ENV=staging"
