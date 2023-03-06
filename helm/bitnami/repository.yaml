@@ -1,0 +1,9 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: bitnami
+spec:
+  interval: 1m0s
+  url: https://charts.bitnami.com/bitnami
+
+# helm repo add bitnami https://charts.bitnami.com/bitnami
