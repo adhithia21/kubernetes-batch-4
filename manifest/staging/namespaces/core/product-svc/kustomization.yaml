@@ -3,3 +3,10 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+  - name: product-secret
+    files:
+      - db.config.json

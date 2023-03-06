@@ -24,3 +24,10 @@ spec:
             cpu: "50m"
         ports:
         - containerPort: 80
+        volumeMounts:
+          - mountPath: /config
+            name: product-secret
+      volumes:
+        - name: product-secret
+          secret:
+            secretName: product-secret
