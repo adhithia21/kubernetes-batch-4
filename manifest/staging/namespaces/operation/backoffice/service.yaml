@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backoffice
+spec:
+  selector:
+    app: backoffice
+  ports:
+  - port: 8000
+    targetPort: 80
