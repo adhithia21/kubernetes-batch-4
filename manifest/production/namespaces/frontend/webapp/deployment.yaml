@@ -12,10 +12,10 @@ spec:
         app: webapp
     spec:
       imagePullSecrets:
-        - name: dockerhub-secret
+      - name: dockerhub-secret
       containers:
       - name: webapp
-        image: aditirvan/webapp:2 # {"$imagepolicy": "flux-system:webapp"}
+        image: aditirvan/webapp:3 # {"$imagepolicy": "flux-system:webapp"}
         resources:
           limits:
             memory: "128Mi"
