@@ -18,7 +18,7 @@ spec:
         name: fluxcdbot
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
-      branch: main
+      branch: master
   update:
     path: ./manifest/cluster/namespaces
     strategy: Setters
