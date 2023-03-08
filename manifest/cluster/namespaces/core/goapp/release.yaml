@@ -12,10 +12,10 @@ spec:
         app: goapp
     spec:
       imagePullSecrets:
-        - name: dockerhub-secret
+      - name: dockerhub-secret
       containers:
       - name: goapp
-        image: aditirvan/goapp:12 # {"$imagepolicy": "flux-system:goapp"}
+        image: aditirvan/goapp:14 # {"$imagepolicy": "flux-system:goapp"}
         resources:
           limits:
             memory: "128Mi"
