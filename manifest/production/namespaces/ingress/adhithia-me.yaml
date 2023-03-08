@@ -19,6 +19,13 @@ spec:
             name: webapp
             port: 
               number: 8000
+      - pathType: Prefix
+        path: "/goapp"
+        backend:
+          service:
+            name: goapp
+            port: 
+              number: 8000
 ---
 apiVersion: v1
 kind: Service
@@ -27,3 +34,11 @@ metadata:
 spec:
   type: ExternalName
   externalName: webapp.frontend.svc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: goapp
+spec:
+  type: ExternalName
+  externalName: goapp.core.svc
