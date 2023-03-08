@@ -5,3 +5,4 @@ resources:
   - operation
   - tools
   - ingress
+  - flux-system
