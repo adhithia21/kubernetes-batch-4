@@ -1,0 +1,22 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: goapp
+  namespace: flux-system
+spec:
+  image: aditirvan/goapp
+  interval: 1m0s
+  secretRef:
+    name: dockerhub-secret
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: goapp
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: goapp
+  policy:
+    numerical:
+      order: asc
