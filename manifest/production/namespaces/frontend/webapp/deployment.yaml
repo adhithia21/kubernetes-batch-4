@@ -11,6 +11,8 @@ spec:
       labels:
         app: webapp
     spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
       containers:
       - name: webapp
         image: aditirvan/webapp:1
