@@ -15,7 +15,7 @@ spec:
         - name: dockerhub-secret
       containers:
       - name: webapp
-        image: aditirvan/webapp:1
+        image: aditirvan/goapp:14
         resources:
           limits:
             memory: "128Mi"
