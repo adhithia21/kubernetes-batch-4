@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - image-update-automation.yaml
   - webapp.yaml
+  - goapp.yaml
