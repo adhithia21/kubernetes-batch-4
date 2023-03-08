@@ -15,7 +15,7 @@ spec:
         - name: dockerhub-secret
       containers:
       - name: webapp
-        image: aditirvan/webapp:2
+        image: aditirvan/webapp:2 # {"$imagepolicy": "flux-system:webapp"}
         resources:
           limits:
             memory: "128Mi"
