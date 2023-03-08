@@ -1,7 +1,27 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: dockerhub
+    name: dockerhub
 type: kubernetes.io/dockerconfigjson
 data:
-  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJhZGl0aXJ2YW4iLCJwYXNzd29yZCI6ImRja3JfcGF0X3hyR19BaTRQc1FkWEMyVU5iMTJBTE80ZnFEQSIsImF1dGgiOiJZV1JwZEdseWRtRnVPbVJqYTNKZmNHRjBYM2h5UjE5QmFUUlFjMUZrV0VNeVZVNWlNVEpCVEU4MFpuRkVRUT09In19fQ==
+    .dockerconfigjson: ENC[AES256_GCM,data:NHF6rXSrnE28CfI5nCTx3KvUMHgvKk/0B9CFXbbTMSuYoeqwsGWl/AvOkve2Vy7Lck6rOweCMzUIG7fEX1sewubE2wIRMEb1S9pEz3dRDas3mvPgCMKwhUCld6iNM9ikm/dng8k3yMhVBHSydpqXR9VwHZvkFpw4k6IN3Z18m5gkPUa59b6iCwnBMHytZnwtHL3WBDgqijhmsXbG3pHxJcAl4DfH2pqS1m37Pl+ZhfAOWeRpGVEl2pMO2dqsMuok8WAOEWyrn7gM3lDUewWlvuLXvqBUMmK2IyT5/Orebr/6dztr/LvL81MI,iv:r5QfZyMp7ST5+54vJ/cGAzqiTjsdHvui3b34WLOVC0o=,tag:YVBf7RREeRWQs8yxvyGsHg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age108qrl5d3rrzvut3tggr2yh3w0ujdu53hdfqu55m7htpgqukw456qx62v5w
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0ZkloQ1dqZ013cG50NXNr
+            Q2tXRTNUUzRNV3JTdEtSMVRvQzZNSFpLRUZvCnUrNTlwODkwVUNrcVpraDhadDQx
+            NUprWjJibDBJRCtCMitYWE9sVlFqYmsKLS0tIEs3dWJaU3hmd1M3WE1kVWhkYVNN
+            TFdxUzAxeFFManByNEVZVTZBYXF6cXMKwxihbgDikwNgCKekalVZ1OCs7WjA3Y55
+            UmrSL7vi4+fbY1I9lCe0oEgCp1GNLATmEQVXm69ojKCpvXZBoeZrgQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-03-08T09:03:28Z"
+    mac: ENC[AES256_GCM,data:H1K1oSnThcHtWPSK2SIa4g18H+nggRiQP4hEBe+8tiee8h7MCKtsgYmhDxoG050MsY8EMxiWNLgkdWfFEMaCSp/CwgYgEqzwCK7vZ3tsR9FIFDootyz//9N1I0vypsgkTATS2qcxa4aTG2dR8j6mTiqSMeCH3RRhhy5jiPmMmYY=,iv:t7uPPLzsjOC7/N9z0tMA1mzKiNYj8A53fINZJ5qAcqE=,tag:CD1KIeXakDo4HW9Ar0xngA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.2
