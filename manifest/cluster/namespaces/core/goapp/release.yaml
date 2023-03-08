@@ -11,6 +11,8 @@ spec:
       labels:
         app: goapp
     spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
       containers:
       - name: goapp
         image: aditirvan/goapp:12
