@@ -4,6 +4,7 @@ namespace: ingress
 resources:
   - namespace.yaml
   - ../../../../helm/ingress-nginx/repository.yaml
+  - ../../../../helm/jetstack/repository.yaml
   - ingress-nginx
   - cert-manager
   - adhithia-me.yaml
