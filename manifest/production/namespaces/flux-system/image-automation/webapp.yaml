@@ -1,0 +1,20 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: webapp
+spec:
+  image: aditirvan/webapp
+  interval: 1m0s
+  secretRef:
+    name: dockerhub-secret
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: webapp
+spec:
+  imageRepositoryRef:
+    name: webapp
+  policy:
+    numerical:
+      order: asc
