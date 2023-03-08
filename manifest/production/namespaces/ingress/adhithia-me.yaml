@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: adhithia-me
+  labels:
+    name: adhithia-me
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: adhithia.me
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: webapp
+            port: 
+              number: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+spec:
+  type: ExternalName
+  externalName: webapp.frontend.svc
