@@ -5,3 +5,4 @@ resources:
   - operation
   - tools
   - frontend
+  - ingress
