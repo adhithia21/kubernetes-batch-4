@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: goapp
 spec:
   selector:
     matchLabels:
-      app: webapp
+      app: goapp
   template:
     metadata:
       labels:
-        app: webapp
+        app: goapp
     spec:
       imagePullSecrets:
         - name: dockerhub-secret
       containers:
-      - name: webapp
-        image: aditirvan/webapp:2
+      - name: goapp
+        image: aditirvan/goapp:14
         resources:
           limits:
             memory: "128Mi"
@@ -24,4 +24,4 @@ spec:
             memory: "64Mi"
             cpu: "50m"
         ports:
-        - containerPort: 80
+        - containerPort: 8000
